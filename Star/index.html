@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--<div class="star selected"></div>-->
+<!--<div class="star selected"></div>-->
+<!--<div class="star selected"></div>-->
+<!--<div class="star selected"></div>-->
+<!--<div class="star selected"></div>-->
+<!-- Целевой контейнер -->
+<div class="react-container" id="root"></div>
+<!-- Библиотеки React и ReactDOM -->
+</body>
+<script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
+<script>
+  // Чистый код React и JavaScript
+  const IngredientList = React.createClass({
+    displayName: 'IngredientList',
+    div: React.createElement('div', null, 'text'),
+    render() {
+      return this.div
+    }
+  })
+  const dish = React.createElement("div", null,
+    [React.createElement('div', {key: 1, className: "star selected"}),
+      React.createElement('div', {key: 2, className: "star selected"}),
+      React.createElement('div', {key: 3, className: "star selected"}),
+      React.createElement('div', {key: 4, className: "star selected"}),
+      React.createElement('div', {key: 5, className: "star selected"}),
+    ],
+    React.createElement(IngredientList, null)
+  );
+  console.log(dish);
+  ReactDOM.render(dish, document.getElementById('root'));
+</script>
+</html>
